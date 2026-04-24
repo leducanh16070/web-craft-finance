@@ -15,6 +15,7 @@ import { Route as SuKienRouteImport } from './routes/su-kien'
 import { Route as LienHeRouteImport } from './routes/lien-he'
 import { Route as HocVienRouteImport } from './routes/hoc-vien'
 import { Route as GioiThieuRouteImport } from './routes/gioi-thieu'
+import { Route as GiaiPhapRouteImport } from './routes/giai-phap'
 import { Route as DieuKhoanRouteImport } from './routes/dieu-khoan'
 import { Route as DangNhapRouteImport } from './routes/dang-nhap'
 import { Route as DangKyRouteImport } from './routes/dang-ky'
@@ -50,6 +51,11 @@ const HocVienRoute = HocVienRouteImport.update({
 const GioiThieuRoute = GioiThieuRouteImport.update({
   id: '/gioi-thieu',
   path: '/gioi-thieu',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GiaiPhapRoute = GiaiPhapRouteImport.update({
+  id: '/giai-phap',
+  path: '/giai-phap',
   getParentRoute: () => rootRouteImport,
 } as any)
 const DieuKhoanRoute = DieuKhoanRouteImport.update({
@@ -89,6 +95,7 @@ export interface FileRoutesByFullPath {
   '/dang-ky': typeof DangKyRoute
   '/dang-nhap': typeof DangNhapRoute
   '/dieu-khoan': typeof DieuKhoanRoute
+  '/giai-phap': typeof GiaiPhapRoute
   '/gioi-thieu': typeof GioiThieuRoute
   '/hoc-vien': typeof HocVienRoute
   '/lien-he': typeof LienHeRoute
@@ -103,6 +110,7 @@ export interface FileRoutesByTo {
   '/dang-ky': typeof DangKyRoute
   '/dang-nhap': typeof DangNhapRoute
   '/dieu-khoan': typeof DieuKhoanRoute
+  '/giai-phap': typeof GiaiPhapRoute
   '/gioi-thieu': typeof GioiThieuRoute
   '/hoc-vien': typeof HocVienRoute
   '/lien-he': typeof LienHeRoute
@@ -118,6 +126,7 @@ export interface FileRoutesById {
   '/dang-ky': typeof DangKyRoute
   '/dang-nhap': typeof DangNhapRoute
   '/dieu-khoan': typeof DieuKhoanRoute
+  '/giai-phap': typeof GiaiPhapRoute
   '/gioi-thieu': typeof GioiThieuRoute
   '/hoc-vien': typeof HocVienRoute
   '/lien-he': typeof LienHeRoute
@@ -134,6 +143,7 @@ export interface FileRouteTypes {
     | '/dang-ky'
     | '/dang-nhap'
     | '/dieu-khoan'
+    | '/giai-phap'
     | '/gioi-thieu'
     | '/hoc-vien'
     | '/lien-he'
@@ -148,6 +158,7 @@ export interface FileRouteTypes {
     | '/dang-ky'
     | '/dang-nhap'
     | '/dieu-khoan'
+    | '/giai-phap'
     | '/gioi-thieu'
     | '/hoc-vien'
     | '/lien-he'
@@ -162,6 +173,7 @@ export interface FileRouteTypes {
     | '/dang-ky'
     | '/dang-nhap'
     | '/dieu-khoan'
+    | '/giai-phap'
     | '/gioi-thieu'
     | '/hoc-vien'
     | '/lien-he'
@@ -177,6 +189,7 @@ export interface RootRouteChildren {
   DangKyRoute: typeof DangKyRoute
   DangNhapRoute: typeof DangNhapRoute
   DieuKhoanRoute: typeof DieuKhoanRoute
+  GiaiPhapRoute: typeof GiaiPhapRoute
   GioiThieuRoute: typeof GioiThieuRoute
   HocVienRoute: typeof HocVienRoute
   LienHeRoute: typeof LienHeRoute
@@ -227,6 +240,13 @@ declare module '@tanstack/react-router' {
       path: '/gioi-thieu'
       fullPath: '/gioi-thieu'
       preLoaderRoute: typeof GioiThieuRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/giai-phap': {
+      id: '/giai-phap'
+      path: '/giai-phap'
+      fullPath: '/giai-phap'
+      preLoaderRoute: typeof GiaiPhapRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/dieu-khoan': {
@@ -291,6 +311,7 @@ const rootRouteChildren: RootRouteChildren = {
   DangKyRoute: DangKyRoute,
   DangNhapRoute: DangNhapRoute,
   DieuKhoanRoute: DieuKhoanRoute,
+  GiaiPhapRoute: GiaiPhapRoute,
   GioiThieuRoute: GioiThieuRoute,
   HocVienRoute: HocVienRoute,
   LienHeRoute: LienHeRoute,
