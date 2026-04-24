@@ -16,9 +16,9 @@ export function Footer() {
           </nav>
           <div className="h-px w-full bg-border/50" />
           <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-muted-foreground">
-            <span className="flex items-center gap-2"><Mail className="h-4 w-4 text-primary" /> hello@ordinex.vn</span>
-            <span className="flex items-center gap-2"><Phone className="h-4 w-4 text-primary" /> +(84)919 111 419</span>
-            <span className="flex items-center gap-2"><MapPin className="h-4 w-4 text-primary" /> Hồ Chí Minh, Việt Nam</span>
+            <span className="flex items-center gap-2"><Mail className="h-4 w-4 text-primary" /><span>hello@ordinex.vn</span></span>
+            <span className="flex items-center gap-2"><Phone className="h-4 w-4 text-primary" /><span>+(84)919 111 419</span></span>
+            <span className="flex items-center gap-2"><MapPin className="h-4 w-4 text-primary" /><span>Hồ Chí Minh, Việt Nam</span></span>
           </div>
         </div>
         <div className="mt-10 flex flex-col md:flex-row items-center justify-between gap-4 border-t border-border/50 pt-6">
