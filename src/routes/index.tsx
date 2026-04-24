@@ -33,12 +33,12 @@ function Hero() {
   return (
     <section className="relative overflow-hidden">
       <div className="absolute inset-0 -z-10 opacity-40 bg-[radial-gradient(circle_at_20%_30%,oklch(0.72_0.20_150/0.15),transparent_50%)]" />
-      <div className="container mx-auto grid gap-12 px-4 py-16 md:grid-cols-2 md:py-24">
+      <div className="container mx-auto grid gap-10 px-4 py-12 md:grid-cols-2 md:py-24">
         <div className="flex flex-col justify-center gap-6">
           <span className="inline-flex w-fit items-center gap-2 rounded-full bg-secondary/60 px-4 py-1.5 text-xs">
             <span className="h-2 w-2 rounded-full bg-primary" /> Ordinex Group Co., Ltd.
           </span>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
             Chào mừng đến với Ordinex<br />
             Hành trình đảm bảo <span className="text-primary">Tài sản</span>{" "}
             <span className="text-primary">của bạn!</span>
